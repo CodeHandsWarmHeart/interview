@@ -1,0 +1,11 @@
+def solution(N):
+    maxLen = 0
+    zerolen = -1 #-1 mean no '1' as head
+    for digit in bin(N):
+        if digit == '1':
+            if zerolen!=0:
+                maxLen = max(maxLen, zerolen)
+            zerolen = 0 #0 mean has '1' as head
+        elif digit == '0':
+           zerolen += 1
+    return maxLen
