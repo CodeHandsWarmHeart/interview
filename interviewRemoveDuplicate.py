@@ -1,4 +1,7 @@
-S ='abccebbeca'
+#题目大概是 输入abbaca 去掉连续重复的字母 第一步去掉a'bb'aca 中的bb, 得到aaca, 还是去掉重复的字母 即'aa'ca中的aa 得到最终结果 ca
+#耗时的算法需要遍历一遍后 多次反复遍历已得结果， 时间复杂度是 n的平方
+#我的答案特点是 只用遍历一遍 O(n) 就可以得出最终结果 
+S ='acebbeca'
 Slist= [i for i in S]
 new_s = []
 duplicateFoundCount = 0
